@@ -73,7 +73,20 @@ public:
         // Announce Module
         if (sConfigMgr->GetBoolDefault("CustomServer.Announce", true))
         {
-            ChatHandler(player->GetSession()).SendSysMessage("This server is running the |cff4CFF00Custom Server |rmodule.");
+            WorldSession* session = player->GetSession();
+            std::string message = "";
+            switch (session->GetSessionDbLocaleIndex())
+            {
+            case LOCALE_ruRU:
+            {
+                message = "На сервере запущен модуль";
+                break;
+            }
+            default:
+                message = "This server is running the";
+                break;
+            }
+            ChatHandler(player->GetSession()).SendSysMessage(message + " |cff4CFF00Custom Server |r");
         }
     }
 
@@ -87,11 +100,17 @@ public:
               case 9:
               case 14:
               case 19:
+              case 24:
               case 29:
+              case 34:
               case 39:
+              case 44:
               case 49:
+              case 54:
               case 59:
+              case 64:
               case 69:
+              case 74:
               case 79:
                 player->CastSpell(player, 11541, true);
                 break;
