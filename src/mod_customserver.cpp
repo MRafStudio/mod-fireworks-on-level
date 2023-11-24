@@ -94,24 +94,54 @@ public:
         if (sConfigMgr->GetBoolDefault("CustomServer.FireworkLevels", true))
         {
             switch (oldLevel) {
-              case 4: 
+              case 4:
+                  player->CastSpell(player, 9313, true);
+                  break;
               case 9:
+                  player->CastSpell(player, 9313, true);
+                  break;
               case 14:
+                  player->CastSpell(player, 9313, true);
+                  break;
               case 19:
+                  player->CastSpell(player, 9312, true);
+                  break;
               case 24:
+                  player->CastSpell(player, 9312, true);
+                  break;
               case 29:
+                  player->CastSpell(player, 9312, true);
+                  break;
               case 34:
+                  player->CastSpell(player, 21589, true);
+                  break;
               case 39:
+                  player->CastSpell(player, 21589, true);
+                  break;
               case 44:
+                  player->CastSpell(player, 21589, true);
+                  break;
               case 49:
+                  player->CastSpell(player, 9318, true);
+                  break;
               case 54:
+                  player->CastSpell(player, 9318, true);
+                  break;
               case 59:
+                  player->CastSpell(player, 11541, true);
+                  break;
               case 64:
+                  player->CastSpell(player, 11541, true);
+                  break;
               case 69:
+                  player->CastSpell(player, 11541, true);
+                  break;
               case 74:
+                  player->CastSpell(player, 54900, true);
+                  break;
               case 79:
-                player->CastSpell(player, 11541, true);
-                break;
+                  player->CastSpell(player, 277458, true);
+                  break;
             }
         }
     }
